@@ -43,7 +43,7 @@ export const Navbar = () => {
                     class="btn btn-danger mx-1"
                     onClick={(event) => actions.toggleFavorite(fav)}
                   >
-                    <i class="fa-ligth fa-trash-can"> </i>
+                    X
                   </button>
                 </a>
               </li>
