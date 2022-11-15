@@ -1,0 +1,25 @@
+.navlogo {
+    height: 50px;
+    width: 130px;
+    margin-left: 20px;
+  }
+
+  .cards {
+    height: auto;
+    display: flex;
+  }
+  .carrusel {
+    height: auto;
+    width: 100%;
+    border: none;
+    background-color: #f9d71c;
+    overflow-x: scroll;
+  }
+
+  .Titulos{
+    color:azure;
+  }
+
+  .carta{
+    background-color: black !important;
+  }

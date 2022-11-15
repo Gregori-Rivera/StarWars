@@ -3,8 +3,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+import { PersonajesView } from "./views/personajesView";
+import { PlanetasView } from "./views/planetasView";
+import { VehiculosView } from "./views/vehiculosView";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -17,7 +18,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div style={{ backgroundColor: "rgb(16, 16, 16)" }}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -25,14 +26,14 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/demo">
-							<Demo />
+						<Route path="/personajes/:id">
+							<PersonajesView />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route path="/planetas/:id">
+							<PlanetasView />
 						</Route>
-						<Route>
-							<h1>Not found!</h1>
+						<Route path="/vehiculos/:id">
+							<VehiculosView />
 						</Route>
 					</Switch>
 					<Footer />
